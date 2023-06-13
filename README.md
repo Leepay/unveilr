@@ -19,8 +19,31 @@
 > `unveilr` 是一款小程序安全评估工具，支持小程序的代码审计和发现敏感信息泄露、接口未授权等安全问题
 
 ### ✅安装方法
-- 使用 `node > 12` 环境自行构建
-- 不会安装的[![tg](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/15px-Telegram_2019_Logo.svg.png)找我](https://t.me/unveilr)
+环境配置
+```text
+* node.js == 20.3.0
+* npm == 9.6.7
+* cnpm == 9.2.0
+```
+- 方法1：使用cnpm安装 （推荐，本仓库以此方法为基准）（不知为什么，npm有网络问题和版本冲突问题）
+    ```bash
+    cd /utils/unveilr
+    //安装依赖
+    cnpm install
+    //构建项目
+    cnpm run build
+    //运行
+    cd dist
+    node index.js -h
+    ```
+- 方法2：打包为可执行文件（pkg在node20打包会出问题）
+    ```bash
+    //进入unveilr目录
+    cd /utils/unveilr
+    //安装pkg
+    npm install -g pkg
+    //打包为可执行文件
+    pkg -t <win/linux> package.json -o <OUTPUT_NAME>
 
 ### 📝参数详解
 
